@@ -173,16 +173,17 @@ contactForm.addEventListener("submit", async (event) => {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const originalLabel = submitButton.innerHTML;
   const formData = new FormData(contactForm);
+  const payload = Object.fromEntries(formData.entries());
 
   submitButton.disabled = true;
   submitButton.textContent = "Sending...";
   setFormStatus("Sending your message...", "pending");
 
   try {
-    const response = await fetch("/", {
+    const response = await fetch("/.netlify/functions/send-contact", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
