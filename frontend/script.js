@@ -186,16 +186,18 @@ contactForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(payload),
     });
 
+    const result = await response.json().catch(() => ({}));
+
     if (!response.ok) {
-      throw new Error("Submission failed");
+      throw new Error(result.message || "Submission failed");
     }
 
     contactForm.reset();
-    setFormStatus("Message sent successfully. I will receive it in my inbox.", "success");
-    showToast("Message sent successfully. I will receive it in my inbox.");
+    setFormStatus(result.message || "Message sent successfully. I will receive it in my inbox.", "success");
+    showToast(result.message || "Message sent successfully. I will receive it in my inbox.");
   } catch (error) {
-    setFormStatus("Message could not be sent. Please try again.", "error");
-    showToast("Message could not be sent. Please try again.");
+    setFormStatus(error.message || "Message could not be sent. Please try again.", "error");
+    showToast(error.message || "Message could not be sent. Please try again.");
   } finally {
     submitButton.disabled = false;
     submitButton.innerHTML = originalLabel;
