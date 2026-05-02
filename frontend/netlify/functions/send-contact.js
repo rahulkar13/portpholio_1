@@ -60,7 +60,7 @@ exports.handler = async (event) => {
   try {
     await transporter.sendMail({
       from: `"Portfolio Contact Form" <${EMAIL_USER}>`,
-      to: "rahul849@gmail.com",
+      to: "rahulkar849@gmail.com",
       replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
