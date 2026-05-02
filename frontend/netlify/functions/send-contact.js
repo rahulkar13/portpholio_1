@@ -78,6 +78,24 @@ exports.handler = async (event) => {
 
     return json(200, { ok: true, message: "Message sent successfully" });
   } catch (error) {
-    return json(500, { ok: false, message: "Message could not be sent" });
+    console.error("SMTP send failed:", {
+      message: error.message,
+      code: error.code,
+      response: error.response,
+      responseCode: error.responseCode,
+    });
+
+    if (error.code === "EAUTH") {
+      return json(500, { ok: false, message: "Email authentication failed. Check EMAIL_USER or EMAIL_PASS." });
+    }
+
+    if (error.code === "ESOCKET" || error.code === "ETIMEDOUT") {
+      return json(500, { ok: false, message: "Email server connection failed." });
+    }
+
+    return json(500, {
+      ok: false,
+      message: error.message || "Message could not be sent",
+    });
   }
 };
