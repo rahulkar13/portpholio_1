@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Modern portfolio for an MCA student and fresher developer seeking internships and entry-level software roles."
+  />
+  <title>RAHUL KAR </title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.32 9.32 0 0 1 12 6.95c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .27.18.59.69.49A10.09 10.09 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M5.75 8.72H2.58v10.69h3.17V8.72ZM4.17 3.5a1.84 1.84 0 1 0 0 3.68 1.84 1.84 0 0 0 0-3.68Zm17.25 9.79c0-3.22-1.72-4.72-4.02-4.72a3.46 3.46 0 0 0-3.13 1.72h-.04V8.72h-3.04v10.69h3.17v-5.29c0-1.39.26-2.74 1.98-2.74 1.7 0 1.72 1.61 1.72 2.83v5.2h3.17v-5.86c0-.09.19-.17.19-.26Z" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path d="M4.25 5.5h15.5c.97 0 1.75.78 1.75 1.75v9.5c0 .97-.78 1.75-1.75 1.75H4.25c-.97 0-1.75-.78-1.75-1.75v-9.5c0-.97.78-1.75 1.75-1.75Zm.34 1.5L12 12.58 19.41 7H4.59Zm15.41 1.2-7.55 5.68c-.27.2-.63.2-.9 0L4 8.2v8.55c0 .14.11.25.25.25h15.5c.14 0 .25-.11.25-.25V8.2Z" />
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M11.25 3.75a.75.75 0 0 1 1.5 0v8.69l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 1 1 1.06-1.06l2.47 2.47V3.75ZM5 14.25a.75.75 0 0 1 .75.75v3.25c0 .41.34.75.75.75h11c.41 0 .75-.34.75-.75V15a.75.75 0 0 1 1.5 0v3.25a2.25 2.25 0 0 1-2.25 2.25h-11a2.25 2.25 0 0 1-2.25-2.25V15a.75.75 0 0 1 .75-.75Z" />
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M13.22 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4.25a.75.75 0 0 1 0-1.5h13.69l-4.72-4.72a.75.75 0 0 1 0-1.06Z" />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 6.5c0-.41.34-.75.75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 6.5Zm0 5.5c0-.41.34-.75.75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 12Zm0 5.5c0-.41.34-.75.75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 17.5Z" />
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6.22 6.22a.75.75 0 0 1 1.06 0L12 10.94l4.72-4.72a.75.75 0 0 1 1.06 1.06L13.06 12l4.72 4.72a.75.75 0 1 1-1.06 1.06L12 13.06l-4.72 4.72a.75.75 0 0 1-1.06-1.06L10.94 12 6.22 7.28a.75.75 0 0 1 0-1.06Z" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M9.55 17.67a.75.75 0 0 1-1.06 0l-4.01-4.01a.75.75 0 0 1 1.06-1.06l3.48 3.48 9.44-9.75a.75.75 0 0 1 1.08 1.04l-9.99 10.3Z" />
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24">
+      <path d="M12 2.75A7.25 7.25 0 0 0 4.75 10c0 5.43 6.49 10.91 6.77 11.14.28.24.68.24.96 0 .28-.23 6.77-5.71 6.77-11.14A7.25 7.25 0 0 0 12 2.75Zm0 16.81C10.6 18.25 6.25 13.81 6.25 10a5.75 5.75 0 1 1 11.5 0c0 3.81-4.35 8.25-5.75 9.56ZM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M6.73 3.25h2.44c.77 0 1.43.55 1.57 1.31l.47 2.61c.11.62-.15 1.25-.67 1.61l-1.11.77a12.55 12.55 0 0 0 5.02 5.02l.77-1.11c.36-.52.99-.78 1.61-.67l2.61.47c.76.14 1.31.8 1.31 1.57v2.44a3 3 0 0 1-3.28 2.99C9.72 19.55 4.45 14.28 3.74 6.53a3 3 0 0 1 2.99-3.28Zm2.44 1.5H6.73c-.88 0-1.57.75-1.49 1.62.65 7.05 5.34 11.74 12.39 12.39.87.08 1.62-.61 1.62-1.49v-2.44a.1.1 0 0 0-.08-.1l-2.61-.47a.1.1 0 0 0-.11.04l-1.14 1.65c-.32.46-.93.63-1.44.39a14.02 14.02 0 0 1-6.21-6.21c-.24-.51-.07-1.12.39-1.44L9.7 7.55a.1.1 0 0 0 .04-.11l-.47-2.61a.1.1 0 0 0-.1-.08Z" />
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M12.04 2.75c-5.1 0-9.24 4.05-9.24 9.05 0 1.6.43 3.16 1.24 4.54l-1.34 4.91 5.08-1.31a9.34 9.34 0 0 0 4.26 1.02h.01c5.1 0 9.25-4.05 9.25-9.06 0-2.42-.97-4.7-2.72-6.4a9.35 9.35 0 0 0-6.54-2.75Zm0 16.64h-.01a7.78 7.78 0 0 1-3.97-1.08l-.28-.17-3.02.78.81-2.92-.19-.3a7.45 7.45 0 0 1-1.16-3.95c0-4.16 3.5-7.55 7.81-7.55 2.09 0 4.05.8 5.53 2.25a7.4 7.4 0 0 1 2.29 5.31c0 4.17-3.5 7.56-7.81 7.56Zm4.28-5.67c-.24-.12-1.42-.69-1.65-.77-.22-.08-.38-.12-.54.12-.16.23-.62.77-.76.92-.14.15-.29.18-.53.06-.24-.12-1-.36-1.9-1.15-.7-.62-1.18-1.38-1.32-1.61-.14-.23-.01-.36.1-.48.1-.1.24-.27.36-.4.12-.14.16-.23.24-.38.08-.15.04-.29-.02-.4-.06-.12-.54-1.28-.74-1.75-.2-.47-.4-.4-.54-.4h-.46c-.16 0-.4.06-.61.29-.21.23-.8.77-.8 1.88s.82 2.19.93 2.34c.12.15 1.61 2.55 4 3.47 2.39.92 2.39.62 2.82.58.43-.04 1.42-.57 1.62-1.12.2-.56.2-1.04.14-1.13-.06-.09-.22-.15-.46-.27Z" />
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Go to home">
+        <span>RAHUL KAR</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <svg class="icon icon-menu"><use href="#icon-menu"></use></svg>
+        <svg class="icon icon-close"><use href="#icon-close"></use></svg>
+      </button>
+
+      <div class="nav-menu" data-nav-menu>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <img
+        class="hero-bg-image"
+        src="https://media.assettype.com/deccanherald/import/sites/dh/files/articleimages/2022/10/08/howrah-1151615-1665206363.jpg?"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="heritage-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-content">
+          
+          <h1>RAHUL KAR</h1>
+          <p class="hero-role">MCA Student | Fresher Developer | Aspiring Software Engineer</p>
+          <p class="hero-intro">
+            Detail-oriented MCA student with a strong foundation in software development, blockchain, and web technologies,
+            passionate about building secure and practical solutions.
+          </p>
+
+          <div class="hero-tags" aria-label="Portfolio highlights">
+            <span>MCA Pursuing</span>
+            <span>Full-Stack Learning</span>
+            <span>Open to Internships</span>
+          </div>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="assets/RAHUL_CV.pdf" download>
+              <svg class="icon"><use href="#icon-download"></use></svg>
+              Download CV
+            </a>
+            <a class="btn btn-secondary" href="#projects">
+              View Projects
+              <svg class="icon"><use href="#icon-arrow"></use></svg>
+            </a>
+          </div>
+
+          <div class="social-list" aria-label="Social links">
+            <a href="https://github.com/rahulkar13" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+              <svg class="icon"><use href="#icon-github"></use></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rahul-kar-764412249" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+              <svg class="icon"><use href="#icon-linkedin"></use></svg>
+            </a>
+            <a href="mailto:rahulkar849@gmail.com" aria-label="Email">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container two-column">
+        <div class="about-intro">
+          <div class="about-profile-card">
+            <img
+              src="assets/profile_Photo.png"
+              alt="Rahul Kar profile photo placeholder"
+            />
+          </div>
+          <p class="section-kicker">About Me</p>
+          <h2>Focused on secure software, practical projects, and continuous learning.</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            I am currently pursuing MCA at Narula Institute of Technology under MAKAUT. As a fresher, I am building
+            strong fundamentals in software development, blockchain, web technologies, databases, and problem-solving.
+          </p>
+          <p>
+            My interests include full-stack development, blockchain-based systems, clean UI implementation, and learning
+            technologies that solve real-world problems. I am open to internships, fresher developer roles, and project
+            opportunities where I can contribute and grow.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span>01</span>
+              <strong>MCA Pursuing</strong>
+              <p>Strengthening computer application and software engineering fundamentals.</p>
+            </div>
+            <div class="highlight-item">
+              <span>02</span>
+              <strong>Project Driven</strong>
+              <p>Learning through practical web, database, and academic software projects.</p>
+            </div>
+            <div class="highlight-item">
+              <span>03</span>
+              <strong>Career Ready</strong>
+              <p>Open to internships, entry-level roles, and collaborative project work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Education</p>
+          <h2>Academic background</h2>
+          <p>
+            Education-first presentation for a fresher profile, with space to add university details and achievements.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span>2024 - 2026</span>
+                <span>Kolkata, West Bengal</span>
+              </div>
+              <h3>MCA - Narula Institute of Technology, MAKAUT</h3>
+              <p>
+                Pursuing Master of Computer Applications with focus on software development, web technologies,
+                blockchain concepts, and computer science fundamentals. Current CGPA: 7.78.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span>2021 - 2024</span>
+                <span>Burdwan, West Bengal</span>
+              </div>
+              <h3>BCA - University of Burdwan</h3>
+              <p>
+                Completed Bachelor of Computer Applications with academic exposure to programming, computing concepts,
+                and project-based learning. Score: 63.5%.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span>2021</span>
+                <span>West Bengal</span>
+              </div>
+              <h3>Higher Secondary - Kamalpur Netaji High School, WBCHSE</h3>
+              <p>
+                Completed higher secondary education with 70.3%.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-kicker"><h2>Skills</h2></p>
+          <h2>&</h2>
+          <h2>Technical tool</h2>
+          <p>
+            A growing skill set across frontend, backend, programming fundamentals, and developer tools.
+          </p>
+        </div>
+
+        <div class="skills-grid" aria-label="Skills list">
+          <span class="skill-card">HTML</span>
+          <span class="skill-card">CSS</span>
+          <span class="skill-card">JavaScript</span>
+          <span class="skill-card">React</span>
+          <span class="skill-card">TypeScript</span>
+          <span class="skill-card">Node.js</span>
+          <span class="skill-card">Python</span>
+          <span class="skill-card">Java</span>
+          <span class="skill-card">C++</span>
+          <span class="skill-card">Ethereum</span>
+          <span class="skill-card">Solidity</span>
+          <span class="skill-card">MongoDB</span>
+          <span class="skill-card">Sql</span>
+          <span class="skill-card">Git/GitHub</span>
+          <span class="skill-card">Hardhat</span>
+          <span class="skill-card">IPFS</span>
+          <span class="skill-card">Problem Solving</span>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Projects</p>
+          <h2>Selected work and academic builds</h2>
+          <p>
+            Two focused projects that show blockchain implementation, full-stack development, resume analysis,
+            role matching, and career-readiness workflows.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured-project">
+            <div class="project-slider" data-project-slider>
+              <div class="project-slider-track">
+                <img src="assets/admin.png" alt="Blockchain project admin panel preview" data-slide-index="0" />
+                <img class="is-active" src="assets/dashbord.png" alt="Blockchain project dashboard preview" data-slide-index="1" />
+                <img src="assets/issue_certificate.png" alt="Issue certificate screen preview" data-slide-index="2" />
+                <img src="assets/Metmask_tranjaction.png" alt="MetaMask transaction approval preview" data-slide-index="3" />
+                <img src="assets/certificate.png" alt="Certificate document preview" data-slide-index="4" />
+                <img src="assets/verify_certificate.png" alt="Verify certificate form preview" data-slide-index="5" />
+                <img src="assets/verify_result.png" alt="Certificate verification result preview" data-slide-index="6" />
+              </div>
+              <button class="project-slider-btn project-slider-prev" type="button" aria-label="Previous blockchain screenshot" data-slider-prev>
+                <svg class="icon"><use href="#icon-arrow"></use></svg>
+              </button>
+              <button class="project-slider-btn project-slider-next" type="button" aria-label="Next blockchain screenshot" data-slider-next>
+                <svg class="icon"><use href="#icon-arrow"></use></svg>
+              </button>
+              <div class="project-slider-dots" aria-label="Blockchain project screenshots">
+                <button class="is-active" type="button" aria-label="Show screenshot 1" data-slider-dot="0"></button>
+                <button type="button" aria-label="Show screenshot 2" data-slider-dot="1"></button>
+                <button type="button" aria-label="Show screenshot 3" data-slider-dot="2"></button>
+                <button type="button" aria-label="Show screenshot 4" data-slider-dot="3"></button>
+                <button type="button" aria-label="Show screenshot 5" data-slider-dot="4"></button>
+                <button type="button" aria-label="Show screenshot 6" data-slider-dot="5"></button>
+                <button type="button" aria-label="Show screenshot 7" data-slider-dot="6"></button>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Blockchain-Based Certificate Issuing and Verification System</h3>
+              <p>
+                A decentralized certificate verification system that stores certificate hashes on Ethereum and certificate
+                files on IPFS, helping reduce forgery and manual validation.
+              </p>
+              <div class="tech-stack">
+                <span>React Vite</span>
+                <span>Tailwind CSS</span>
+                <span>Ethereum</span>
+                <span>Solidity</span>
+                <span>Hardhat</span>
+                <span>IPFS Pinata</span>
+                <span>MetaMask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rahulkar13/blockchain-certificate-verification" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/rahul-kar-764412249" target="_blank" rel="noreferrer">LinkedIn Post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card featured-project">
+            <a
+              class="project-live-preview"
+              href="https://careercompass365.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open CareerCompass live website"
+            >
+              <iframe
+                src="https://careercompass365.netlify.app"
+                title="CareerCompass live preview"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              ></iframe>
+            </a>
+            <div class="project-body">
+              <h3>CareerCompass</h3>
+              <p>
+                A career guidance platform for students and job seekers with resume analysis, job matching, skill-gap
+                insights, interview preparation, mock interviews, coding tests, and readiness reports.
+              </p>
+              <div class="tech-stack">
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Tailwind CSS</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/rahulkar13/CareerCompass" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://careercompass365.netlify.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-lightbox" data-image-lightbox hidden>
+      <div class="image-lightbox-backdrop" data-lightbox-close></div>
+      <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Project screenshot preview">
+        <button class="image-lightbox-nav image-lightbox-prev" type="button" aria-label="Previous project screenshot" data-lightbox-prev>
+          <svg class="icon"><use href="#icon-arrow"></use></svg>
+        </button>
+        <button class="image-lightbox-nav image-lightbox-next" type="button" aria-label="Next project screenshot" data-lightbox-next>
+          <svg class="icon"><use href="#icon-arrow"></use></svg>
+        </button>
+        <button class="image-lightbox-close" type="button" aria-label="Close image preview" data-lightbox-close>
+          <svg class="icon"><use href="#icon-close"></use></svg>
+        </button>
+        <img src="" alt="" data-lightbox-image />
+      </div>
+    </div>
+
+    <section class="section resume-section" id="resume">
+      <div class="container resume-panel">
+        <div>
+          <p class="section-kicker">CV / Resume</p>
+          <h2>Open to internships and fresher software developer opportunities.</h2>
+          <p>
+            A concise resume highlighting my education, technical skills, projects, certifications, and career goals.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="assets/RAHUL_CV.pdf" download>
+          <svg class="icon"><use href="#icon-download"></use></svg>
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Certifications / Achievements</p>
+          <h2>Learning milestones</h2>
+          <p>
+            Verified certificates from Coursera and Oracle. Click any certificate card to open its official certificate page.
+          </p>
+        </div>
+
+        <div class="achievement-grid">
+          <a class="achievement-card achievement-link" href="https://coursera.org/share/18f793476a6f08795ae25e5736d6787d" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Coursera</span>
+              <span>University of Michigan</span>
+            </div>
+            <h3>Programming for Everybody (Getting Started with Python)</h3>
+            <p>Overview: Python basics, programming logic, variables, expressions, and first steps in problem solving.</p>
+            <div class="achievement-preview">
+              <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~BUUDSLTLMM2Z/CERTIFICATE_LANDING_PAGE~BUUDSLTLMM2Z.jpeg" alt="Preview of Programming for Everybody certificate" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+          <a class="achievement-card achievement-link" href="https://coursera.org/share/d0115fa22c570eb1cb16b7a3881f33fd" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Coursera</span>
+              <span>Google</span>
+            </div>
+            <h3>Crash Course on Python</h3>
+            <p>Overview: Python syntax, functions, automation basics, debugging habits, and practical scripting foundations.</p>
+            <div class="achievement-preview">
+              <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3LK3578A76LH/CERTIFICATE_LANDING_PAGE~3LK3578A76LH.jpeg" alt="Preview of Crash Course on Python certificate" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+          <a class="achievement-card achievement-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=7BE25B12EBCC8259C653B18AE03D0A3213F3CE59B770240BC18CC5F3DA408CAF" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Oracle</span>
+              <span>OCI 2025</span>
+            </div>
+            <h3>Oracle Cloud Infrastructure 2025 Certified Architect Associate</h3>
+            <p>Overview: Cloud architecture fundamentals, OCI services, deployment patterns, scalability, and solution design.</p>
+            <div class="achievement-preview achievement-preview-badge">
+              <img src="https://brm-workforce.oracle.com/pdf/certview/images/OCI25CAA.png" alt="Preview badge for Oracle Cloud Infrastructure 2025 Certified Architect Associate" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+          <a class="achievement-card achievement-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=185215210CF2FBDBE6BA707864EA666C31A5EA8558D6871908D4CA3DD7EA7DE6" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Oracle</span>
+              <span>OCI 2025</span>
+            </div>
+            <h3>Oracle Cloud Infrastructure 2025 Certified Data Science Professional</h3>
+            <p>Overview: Data workflows, machine learning foundations, analytics thinking, and cloud-based data science tools.</p>
+            <div class="achievement-preview achievement-preview-badge">
+              <img src="https://brm-workforce.oracle.com/pdf/certview/images/OCI25DSOCP.png" alt="Preview badge for Oracle Cloud Infrastructure 2025 Certified Data Science Professional" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+          <a class="achievement-card achievement-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=DCB0E5FA6F1E71206D0A4D1DA30633A4D6E63F7D51E39CE031B64AC8C852B7CB" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Oracle</span>
+              <span>OCI 2025</span>
+            </div>
+            <h3>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+            <p>Overview: Generative AI concepts, model usage patterns, responsible AI thinking, and OCI AI capabilities.</p>
+            <div class="achievement-preview achievement-preview-badge">
+              <img src="https://brm-workforce.oracle.com/pdf/certview/images/OCI25GAIOCP.png" alt="Preview badge for Oracle Cloud Infrastructure 2025 Certified Generative AI Professional" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+          <a class="achievement-card achievement-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=E70D5D8B2663855AEE9C33CB018C5AB056A8CF031A26613DB48D591577BE5FE0" target="_blank" rel="noreferrer">
+            <span class="achievement-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+            <div class="achievement-meta">
+              <span>Oracle</span>
+              <span>OCI 2025</span>
+            </div>
+            <h3>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
+            <p>Overview: Core cloud concepts, OCI essentials, foundational infrastructure knowledge, and platform navigation.</p>
+            <div class="achievement-preview achievement-preview-badge">
+              <img src="https://brm-workforce.oracle.com/pdf/certview/images/OCI25FNDCFAV1.png" alt="Preview badge for Oracle Cloud Infrastructure 2025 Certified Foundations Associate" />
+            </div>
+            <span class="achievement-cta">View certificate <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Let us talk about internships, fresher roles, or project work.</h2>
+          <p class="contact-lead">
+            I am available for meaningful learning opportunities, developer collaborations, and entry-level software roles.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:rahulkar849@gmail.com">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+              rahulkar849@gmail.com
+            </a>
+            <a href="tel:+916294771638">
+              <svg class="icon"><use href="#icon-phone"></use></svg>
+              +91 62947 71638
+            </a>
+            <a href="https://wa.me/916294771638" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              WhatsApp
+            </a>
+            <span>
+              <svg class="icon"><use href="#icon-location"></use></svg>
+              Bankura, West Bengal, India
+            </span>
+            <a href="https://www.linkedin.com/in/rahul-kar-764412249" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-linkedin"></use></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/rahulkar13" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="hidden-field" aria-hidden="true">
+            <label for="bot-field">Leave this field empty</label>
+            <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your.email@example.com" required />
+          </div>
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Internship opportunity" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+          <button class="btn btn-primary full-width" type="submit">
+            Send Message
+            <svg class="icon"><use href="#icon-arrow"></use></svg>
+          </button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="footer-brand" href="#home">RAHUL KAR</a>
+        <p>&copy; <span data-year></span> RAHUL KAR</p>
+      </div>
+      <div class="social-list" aria-label="Footer social links">
+        <a href="https://github.com/rahulkar13" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+          <svg class="icon"><use href="#icon-github"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rahul-kar-764412249" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+          <svg class="icon"><use href="#icon-linkedin"></use></svg>
+        </a>
+        <a href="mailto:rahulkar849@gmail.com" aria-label="Email">
+          <svg class="icon"><use href="#icon-mail"></use></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

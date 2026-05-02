@@ -1,0 +1,17 @@
+{
+  "name": "new-project-3",
+  "version": "1.0.0",
+  "main": "frontend/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,
+    "dev": "live-server --open=./frontend/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
