@@ -10,6 +10,7 @@ pnpm-debug.log*
 dist/
 build/
 .cache/
+frontend/dist/
 
 # Environment files
 .env
@@ -24,4 +25,3 @@ desktop.ini
 .idea/
 *.swp
 *.swo
-
