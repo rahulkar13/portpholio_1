@@ -180,16 +180,32 @@ contactForm.addEventListener("submit", async (event) => {
   setFormStatus("Sending your message...", "pending");
 
   try {
-    const response = await fetch("/.netlify/functions/send-contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const endpoints = ["/api/send-contact", "/.netlify/functions/send-contact"];
+    let response;
+    let result = {};
+    let lastMessage = "Submission failed";
 
-    const result = await response.json().catch(() => ({}));
+    for (const endpoint of endpoints) {
+      response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    if (!response.ok) {
-      throw new Error(result.message || "Submission failed");
+      result = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        break;
+      }
+
+      if (response.status !== 404) {
+        lastMessage = result.message || "Submission failed";
+        break;
+      }
+    }
+
+    if (!response || !response.ok) {
+      throw new Error(lastMessage || result.message || "Submission failed");
     }
 
     contactForm.reset();
