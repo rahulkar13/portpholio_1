@@ -72,6 +72,13 @@ navLinks.forEach((link) => {
   link.addEventListener("click", closeNav);
 });
 
+document.querySelectorAll("a, button").forEach((element) => {
+  element.setAttribute("draggable", "false");
+  element.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+  });
+});
+
 if (projectSlider) {
   const slides = [...projectSlider.querySelectorAll(".project-slider-track img")];
   const dots = [...projectSlider.querySelectorAll("[data-slider-dot]")];
