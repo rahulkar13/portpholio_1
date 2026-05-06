@@ -1,5 +1,5 @@
 {
-  "name": "new-project-3",
+  "name": "rahul-portfolio-workspace",
   "version": "1.0.0",
   "main": "frontend/script.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Workspace for Rahul Kar portfolio website",
   "devDependencies": {
     "live-server": "^1.2.2"
   }
