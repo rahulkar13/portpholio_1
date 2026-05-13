@@ -7,11 +7,6 @@ const toast = document.querySelector("[data-toast]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 const yearTarget = document.querySelector("[data-year]");
-const projectSlider = document.querySelector("[data-project-slider]");
-const imageLightbox = document.querySelector("[data-image-lightbox]");
-const lightboxImage = document.querySelector("[data-lightbox-image]");
-const lightboxPrevButton = document.querySelector("[data-lightbox-prev]");
-const lightboxNextButton = document.querySelector("[data-lightbox-next]");
 
 const showToast = (message) => {
   toast.textContent = message;
@@ -78,96 +73,6 @@ document.querySelectorAll("a, button").forEach((element) => {
     event.preventDefault();
   });
 });
-
-if (projectSlider) {
-  const slides = [...projectSlider.querySelectorAll(".project-slider-track img")];
-  const dots = [...projectSlider.querySelectorAll("[data-slider-dot]")];
-  const prevButton = projectSlider.querySelector("[data-slider-prev]");
-  const nextButton = projectSlider.querySelector("[data-slider-next]");
-  const lightboxCloseTargets = [...document.querySelectorAll("[data-lightbox-close]")];
-  let activeSlideIndex = 0;
-
-  const renderSlide = (index) => {
-    activeSlideIndex = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle("is-active", slideIndex === activeSlideIndex);
-    });
-
-    dots.forEach((dot, dotIndex) => {
-      dot.classList.toggle("is-active", dotIndex === activeSlideIndex);
-    });
-  };
-
-  const openLightbox = (slide) => {
-    lightboxImage.src = slide.src;
-    lightboxImage.alt = slide.alt;
-    imageLightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-  };
-
-  const openLightboxByIndex = (index) => {
-    renderSlide(index);
-    openLightbox(slides[activeSlideIndex]);
-  };
-
-  const closeLightbox = () => {
-    imageLightbox.hidden = true;
-    lightboxImage.src = "";
-    lightboxImage.alt = "";
-    document.body.style.overflow = "";
-  };
-
-  prevButton.addEventListener("click", () => {
-    renderSlide(activeSlideIndex - 1);
-  });
-
-  nextButton.addEventListener("click", () => {
-    renderSlide(activeSlideIndex + 1);
-  });
-
-  dots.forEach((dot, dotIndex) => {
-    dot.addEventListener("click", () => {
-      renderSlide(dotIndex);
-    });
-  });
-
-  slides.forEach((slide) => {
-    slide.addEventListener("click", () => {
-      openLightboxByIndex(Number(slide.dataset.slideIndex));
-    });
-  });
-
-  lightboxCloseTargets.forEach((target) => {
-    target.addEventListener("click", closeLightbox);
-  });
-
-  lightboxPrevButton.addEventListener("click", () => {
-    renderSlide(activeSlideIndex - 1);
-    openLightbox(slides[activeSlideIndex]);
-  });
-
-  lightboxNextButton.addEventListener("click", () => {
-    renderSlide(activeSlideIndex + 1);
-    openLightbox(slides[activeSlideIndex]);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !imageLightbox.hidden) {
-      closeLightbox();
-    }
-
-    if (event.key === "ArrowLeft" && !imageLightbox.hidden) {
-      renderSlide(activeSlideIndex - 1);
-      openLightbox(slides[activeSlideIndex]);
-    }
-
-    if (event.key === "ArrowRight" && !imageLightbox.hidden) {
-      renderSlide(activeSlideIndex + 1);
-      openLightbox(slides[activeSlideIndex]);
-    }
-  });
-}
 
 contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
